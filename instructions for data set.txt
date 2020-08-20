@@ -1,0 +1,27 @@
+Format:
+[(difficulty(E,M,H), que_no, group(S,C),
+ ques, ans),]
+------------X------------
+
+Data Array Example:
+[('E', 1, "S",
+"What would be the difference between the place values of the digits at the tens and units places of a number formed by the addition of the greatest six-digit number and the smallest three-digit number?", "81"),
+
+("E", 2, "S",
+"1/(48*100) + 1/(52*100) - 1/(48*52)", "0"),
+
+(<set 3>),
+.
+.
+.
+]
+------------X------------
+
+Instructions:
+-use single quotes everywhere (ignore double quotes as used above)
+-file should be in .txt format
+-difficulty for easy questions should be 'E', medium for 'M', hard for 'H'
+-take special care of the position of variables in the tuple () ie difficulty rating for 		each question should be in position 1, question number in position 2, followed by 
+	group, question statement, answer
+
+------------X------------
