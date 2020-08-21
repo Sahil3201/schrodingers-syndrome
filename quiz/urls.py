@@ -6,8 +6,9 @@ from django.contrib.auth.views import LoginView
 app_name = "quiz"
 
 urlpatterns = [
-    path("instructions/", views.instructions.as_view(), name="instructions"),
-    path("", views.quiz_page, name="quiz"),
+    path("", views.instructions.as_view(), name="instructions"),
+    path("instructions/", views.instructions.as_view(), name="instruction"),
+    path("quiz/", views.quiz_page, name="quiz"),
     path("quiz/get_time_for_question",
         views.get_time_for_question,
         name="get_time_for_question",),

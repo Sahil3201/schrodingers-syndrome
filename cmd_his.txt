@@ -1,0 +1,42 @@
+cd "Desktop\Python - Web Development bootcamp\schrodingers-syndrome"
+dir
+pip install gunicorn
+pip freeze
+pip install django-heroku
+heroku
+heroku login
+cls
+git push heroku master
+git add .
+git commit
+git push heroku master
+heroku logs --tail
+y
+heroku ps:scale web=1
+git commit
+git add .
+git commit
+git push
+git pull
+git push heroku master
+heroku run python manage.py createsuperuser
+heroku run python manage.py syncdb
+heroku run python manage.py createsuperuser
+heroku run python manage.py migrate
+git add .
+git commit -all
+git commit --all
+git push
+git push heroku master
+heroku run python manage.py syncdb
+heroku run python manage.py createsuperuser
+heroku run python manage.py migrate
+heroku run python manage.py makemigrations
+heroku run python manage.py migrate
+heroku run python manage.py createsuperuser
+heroku logs --tail
+y
+doskey /history
+doskey
+doskey /history > C:\Users\lunaw\Desktop\Python - Web Development bootcamp\cmd_history.txt
+doskey /history > cmd_his.txt
