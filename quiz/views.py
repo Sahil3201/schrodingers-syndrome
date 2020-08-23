@@ -58,13 +58,13 @@ def quiz_page(request):
             thankyou_context = {'score': request.user.score}
             return render(request, "quiz/thankyou.html", context=thankyou_context)
 
-        qna = get_question(answered_qid, current_diff, "C")
+        grp = 'S' if str(request.user.username)[0]=='1' else 'C'
+        qna = get_question(answered_qid, current_diff, grp)
         print(request.user)
         answer = Answers(student=request.user, qna=qna,
                          shown_at=datetime.timestamp(datetime.now()))
         answer.save()
 
-        # grp = "C"
         context = {"current_que_no": current_que_no,
                    "que_statement": qna.question, "qid": qna.qid}
         return render(request, "quiz/quiz.html", context=context)
