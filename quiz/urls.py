@@ -21,6 +21,6 @@ urlpatterns = [
     #     ),
     #     name="login",
     # ),
-    path("login", views.login.as_view(), name="login"),
-    path('logout',views.logout.as_view(), name='logout'),
+    path("login/", views.login.as_view(), name="login"),
+    path('logout/',views.logout.as_view(), name='logout'),
 ]

@@ -186,7 +186,7 @@ def populate_quiz():
 		diff 	= d[0]
 		que_no 	= d[1]
 		grp 	= d[2]
-		que 	= d[3] + ' [(Answer: ' + d[4] + ') - ' + diff + str(que_no)+']'
+		que 	= d[3]# + ' [(Answer: ' + d[4] + ') - ' + diff + str(que_no)+']'
 		ans 	= d[4]
 
 		grp_code = 1 if grp=='S' else 2
