@@ -41,7 +41,7 @@
             <li> Do not reload the page once the test starts</li>
         </ul>
         <button id="startquiz" class="btn btn-lg btn-primary mr-2">Start quiz</button>
-        <small>(Signed in as '{{user.username}}')</small>
+        <a href="{% url 'quiz:logout' %}"><small>(Signed in as '{{user.username}}'. Sign out!)</small></a>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
