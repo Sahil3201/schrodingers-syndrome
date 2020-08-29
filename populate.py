@@ -75,7 +75,7 @@ data = [
 ('M', 2,'S','How many prime numbers from 11 to 100 are there, whose digits when interchanged give a prime number?','9'),
 ('M', 3,'S','The price of 2 sarees and 4 shirts is Rs. 1600. With the same money one can buy 1 saree and 6 shirts. If one wants to buy 12 shirts, how much shall he have to pay ?','2400'),
 ('M', 4,'S','143×72 / 98 = ?','1372'),
-('M', 5,'S','What is the unit digit in (6324)1797×(615)316×(341)467 ','0'),
+('M', 5,'S','What is the unit digit in (6324)^1797×(615)^316×(341)^467','0'),
 ('M', 6,'S','(912+643)2+(912−643)2 / (912×912+643×643) =?','2'),
 ('M', 7,'S','If Z = 52 and ACT = 48, then BAT will be equal to','46'),
 ('M', 8,'S','12 workers can complete a piece of work in 10 days. If the number of workers are reduced to 1/3rd the original number, then how many more days would be required to complete the same work?','20'),

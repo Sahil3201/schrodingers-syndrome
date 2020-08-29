@@ -77,13 +77,10 @@ def get_question(answered_qid, current_diff, group):
             break
         max_count = max_count - 1
     else:
-        if diff_code=='E':
-            diff_code = 'M'
-        elif diff_code=='M':
-            diff_code = 'H'
-        else:
-            diff_code = 'E'
-        get_question(answered_qid,diff_code,group)
+        print('in else')
+        if current_diff=='E':
+            current_diff = 'M'
+        return get_question(answered_qid,diff_code,group)
     return Qna.objects.get(qid=que_id)
 
 # def get_time_for_question(request):
