@@ -18,7 +18,7 @@ def quiz_page(request):
         correct_answer = qna.answer
 
         answer = Answers.objects.get(student=request.user, qna=qna)
-        if ans == correct_answer and datetime.timestamp(datetime.now())-answer.shown_at<140:
+        if ans.lower() == correct_answer.lower() and datetime.timestamp(datetime.now())-answer.shown_at<140:
             answer.correct = True
             stud = Student.objects.get(id=request.user.id)
             stud.score = stud.score + \
@@ -76,6 +76,14 @@ def get_question(answered_qid, current_diff, group):
         if str(que_id) not in answered_qid:
             break
         max_count = max_count - 1
+    else:
+        if diff_code=='E':
+            diff_code = 'M'
+        elif diff_code=='M':
+            diff_code = 'H'
+        else:
+            diff_code = 'E'
+        get_question(answered_qid,diff_code,group)
     return Qna.objects.get(qid=que_id)
 
 # def get_time_for_question(request):
