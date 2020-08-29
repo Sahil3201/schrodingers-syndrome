@@ -18,7 +18,7 @@ def quiz_page(request):
         correct_answer = qna.answer
 
         answer = Answers.objects.get(student=request.user, qna=qna)
-        if ans.lower() == correct_answer.lower() and datetime.timestamp(datetime.now())-answer.shown_at<140:
+        if ans.lower().replace(' ','') == correct_answer.lower().replace(' ','') and datetime.timestamp(datetime.now())-answer.shown_at<140:
             answer.correct = True
             stud = Student.objects.get(id=request.user.id)
             stud.score = stud.score + \
