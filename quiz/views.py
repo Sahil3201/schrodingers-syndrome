@@ -83,14 +83,6 @@ def get_question(answered_qid, current_diff, group):
         return get_question(answered_qid,diff_code,group)
     return Qna.objects.get(qid=que_id)
 
-# def get_time_for_question(request):
-#     user = request.user
-#     ans = Answers.objects.filter(student=user).latest("shown_at").shown_at
-#     submit_time_in_sec = (
-#         (((ans.hour * 60) + ans.minute) * 60) + ans.second) + 124
-#     return HttpResponse(submit_time_in_sec)
-
-
 class instructions(LoginRequiredMixin, generic.TemplateView):
     template_name = "quiz/instructions.html"
 
